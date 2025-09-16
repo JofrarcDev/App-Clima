@@ -26,5 +26,5 @@ def get_weather(city):
         # Manejo de errores si la ciudad no se encuentra    
         return {"error": "Ciudad no encontrada"}
 
-#print(get_weather())  # Ejemplo de llamada a la función
+        
 
