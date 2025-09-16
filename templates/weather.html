@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima en {{city}}</title>
+    <script src="https://kit.fontawesome.com/c91cfbdec7.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #222224;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}   
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    padding: 20px;
+}
+
+.weather-container {
+    background-color: #201b5e;
+    border-radius: 10px;
+    padding: 10px 50px;
+    box-shadow: 2px 0 10px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    color: #f4f4f4;
+}
+.titulo {
+    font-size: 3.2rem;
+}
+.weather-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #292749;
+    color: #f4f4f4;
+    text-align: center;
+}
+.weather-item:hover {
+    background-color: #3a3a6c;
+}
+p {
+    margin: 0;
+    font-size: 2.2rem;
+}
+.btn {
+    padding: 10px 20px;
+    background-color: #4a4a8c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 2.2rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+.btn:hover {
+    background-color: #3a3a6c;
+}
+@media (max-width: 696px) {
+    .weather-container {
+        padding: 20px;
+    }
+    .titulo {
+        font-size: 2.5rem;
+    }
+    .weather-item{
+        width: 90%;
+    }
+    .weather-item p {
+        font-size: 1.8rem;
+    }
+    .btn {
+        font-size: 1.8rem;
+    }   
+    
+}
+@media (max-width: 496px) {
+    .weather-container {
+        padding: 10px;
+    }
+    .titulo {
+        font-size: 1.5rem;
+    }
+    .weather-item p {
+        font-size: 1.2rem;
+    }
+    .btn {
+        font-size: 1.2rem;
+        width: 90%;
+    }       
+    
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="weather-container">
+            <div class="weather-header">
+                <h1 class="titulo">Clima en {{ city }}</h1>
+            </div>
+            
+        
+            <div class="weather-info">
+                <div class="weather-item">
+                    <p><i class="fa-solid fa-temperature-low"></i> Temperatura: {{ weather.temperature }}°C</p>
+                </div>
+                <div class="weather-item">
+                    <p><i class="fa-solid fa-gauge-high"></i> Presión: {{ weather.pressure }} hPa</p>
+                </div>
+                <div class="weather-item">
+                    <p><i class="fa-solid fa-droplet"></i> Humedad: {{ weather.humidity }}%</p>
+                </div>
+                <div class="weather-item">
+                    <p><i class="fa-solid fa-wind"></i> Viento: {{ weather.wind_speed }} m/s</p>
+                </div>
+                <div class="weather-item">
+                    <p><i class="fa-solid fa-cloud"></i> Descripción: {{ weather.description }}</p>
+                </div>
+            </div>
+            <a href="/" class="btn"><i class="fa-solid fa-arrow-left"></i> Volver a Buscar</a>
+        </div>
+    </div>
+</body>
+</html>
