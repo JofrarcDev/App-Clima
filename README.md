@@ -31,8 +31,8 @@ link: https://clima-gskk.onrender.com/
 
 ```bash
 # Clonar el repositorio
-$ git clone https://github.com/usuario/clima.git
-$ cd clima
+$ git clone https://github.com/JofrarcDev/App-Clima.git
+$ cd App-clima
 
 # Crear entorno virtual (opcional pero recomendado)
 $ python -m venv venv
